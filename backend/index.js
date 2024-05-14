@@ -12,6 +12,7 @@ dotenv.config();
 
 app.use(express.json({ limit: '10mb' }))
 app.use(cors())
+app.get("/", (req, res) => res.send("Hello World!"));
 
 mongoose
     .connect(process.env.MONGO_URL, {
